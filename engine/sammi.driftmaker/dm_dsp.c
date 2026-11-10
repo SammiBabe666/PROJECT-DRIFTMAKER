@@ -153,11 +153,11 @@ void dm_voice_render(struct dm_voice *v, short *out, const short *par, unsigned 
     }
     int oct[3];
     for (int i = 0; i < 3; ++i) {
-        v->drift[i] += (((int)(rnd(&v->seed) >> 20) - 2048) << 1) - (v->drift[i] >> 10);
+        v->drift[i] += ((int)(rnd(&v->seed) >> 20) - 2048) * 2 - (v->drift[i] >> 10);
         oct[i] = wob + (((v->drift[i] >> 8) * dscale) >> 15);
     }
     oct[0] -= sp;
-    oct[1] += sp + ((bell * 95853) >> 15);                          /* the bell zone: osc 2 glides to 2.756 */
+    oct[1] += sp + (((bell >> 3) * 95853) >> 12);                          /* the bell zone: osc 2 glides to 2.756 */
     oct[2] += o3oct + (sp >> 1);
     unsigned st[3];
     int mip[3];

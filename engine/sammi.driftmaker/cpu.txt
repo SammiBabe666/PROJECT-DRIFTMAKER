@@ -1,4 +1,11 @@
-# DRIFTMAKER's CPU figure: its worst audio block in cycles (the build writes it as the manifest's cpu line).
-# NOT YET MEASURED ON AN OP-1: placeholder until the Blackfin-simulator estimate replaces it.
-cycles 200000
-estimated 2026-11-10 placeholder
+# DRIFTMAKER's CPU figure: its worst audio block in cycles. The build writes it as the manifest's cpu line, the budget
+# the Opus core holds the engine to (switched off past 125 % of it in 8 of 64 blocks, outside developer mode).
+#
+# NOT YET MEASURED ON AN OP-1. This is an estimate from the Blackfin instruction-set simulator (sim/run.sh,
+# bfin-elf-run, the kit's compiler flags): the worst block was 122,545 cycles (six high voices, every value at 99,
+# frozen grains): voices 78,094, the block's effects 44,451. The simulator models no memory stalls, so the figure
+# carries a 30 % margin, as the Opus beta-4 readiness checklist asks of unmeasured engines: 160,000 (28 % of the
+# 580,525-cycle block). Replace it with the device's "audio: worst N" (developer mode on, the mods list, orange push
+# on its row) after six-voice chords at the heaviest settings.
+cycles 160000
+estimated 2026-11-10 bfin-elf-run simulator x 1.3, not a device

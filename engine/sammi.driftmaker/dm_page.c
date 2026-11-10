@@ -194,8 +194,11 @@ static void value_text(char *b, unsigned n, int group, int enc, const short *k)
         fw_snprintf(b, n, "%i.%i%i hz", c / 100, (c / 10) % 10, c % 10);
     } else if (p == 16 + DM_D_FREEZE) {
         fw_snprintf(b, n, "%s", v ? "held" : "off");
-    } else if (p == 16 + DM_D_DELAY) {
-        fw_snprintf(b, n, "%i ms", (int)DM_DELAY[v] * 10 / 441);
+    } else if (p == 16 + DM_D_DELAY) {     /* 0: the delay is off (dm_fx sends it nothing) */
+        if (v)
+            fw_snprintf(b, n, "%i ms", (int)DM_DELAY[v] * 10 / 441);
+        else
+            fw_snprintf(b, n, "%s", "off");
     } else {
         fw_snprintf(b, n, "%i", v);
     }

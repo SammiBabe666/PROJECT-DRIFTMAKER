@@ -2,7 +2,8 @@
  *   dm_host test                         the functional tests (exit 0 when all pass)
  *   dm_host render TAG SECS HOLD N...     preset TAG, notes N... held HOLD s, SECS s in all: raw s16 44.1 kHz to stdout
  *   dm_host score FILE                    a score (demo/): raw audio to stdout
- *   dm_host page TAG GROUP FRAMES [TURN]  the T1 page's drawing calls, as text, after FRAMES frames of a held chord
+ *   dm_host video SCORE AUDIO.raw        a score: audio to AUDIO.raw, the page's drawing calls every 1/30 s to stdout
+ *   dm_host page TAG GROUP FRAMES [TOUCH [FREEZE]]  the T1 page's drawing calls, as text, after FRAMES frames of a chord
  * Copyright (C) 2026 Sammi. GPL-3.0-or-later. */
 #include <stdio.h>
 #include <stdlib.h>
@@ -158,9 +159,29 @@ static int test(void)
     return fails ? 1 : 0;
 }
 
+static FILE *audio_out;                    /* where the audio goes (stdout, or a file in video mode) */
+static int video;                          /* video mode: a frame's drawing every 1/30 s of audio */
+static long samples, next_frame;
+
 static void write_raw(int n)
 {
-    fwrite(buf, sizeof(short), (size_t)n * 64, stdout);
+    fwrite(buf, sizeof(short), (size_t)n * 64, audio_out ? audio_out : stdout);
+}
+
+/* n blocks, and in video mode the page's drawing at each 30th of a second (1470 samples) */
+static void run_blocks(int n)
+{
+    if (!video) { emul_blocks(buf, n); write_raw(n); samples += 64L * n; return; }
+    for (int b = 0; b < n; ++b) {
+        emul_blocks(buf, 1);
+        fwrite(buf, sizeof(short), 64, audio_out);
+        samples += 64;
+        if (samples >= next_frame) {
+            next_frame += 1470;
+            printf("frame %ld\n", samples);
+            emul_page();
+        }
+    }
 }
 
 /* a score: lines "t SECONDS", "preset TAG", "on NOTE", "off NOTE", "alloff", "key K", "turn E D", "shift 0|1",
@@ -171,12 +192,16 @@ static int score(const char *path)
     if (!f) return 2;
     char line[256];
     double now = 0;
+    (void)now;
     while (fgets(line, sizeof line, f)) {
         double t; int a, b;
         if (line[0] == '#' || line[0] == '\n') continue;
         if (sscanf(line, "t %lf", &t) == 1 || sscanf(line, "end %lf", &t) == 1) {
-            int blocks = (int)((t - now) * 44100.0 / 64 + 0.5);
-            while (blocks > 0) { const int n = blocks > 1024 ? 1024 : blocks; emul_blocks(buf, n); write_raw(n); blocks -= n; }
+            long target = (long)(t * 44100.0 / 64 + 0.5) * 64;
+            while (samples < target) {
+                const long left = (target - samples) / 64;
+                run_blocks(left > 1024 ? 1024 : (int)left);
+            }
             now = t;
         } else if (sscanf(line, "preset %d", &a) == 1) emul_load(a);
         else if (sscanf(line, "on %d", &a) == 1) emul_note(a, 1);
@@ -213,6 +238,16 @@ int main(int argc, char **argv)
     }
     if (argc >= 3 && strcmp(argv[1], "score") == 0)
         return score(argv[2]);
+    if (argc >= 4 && strcmp(argv[1], "video") == 0) {
+        /* video SCORE AUDIO.raw: the audio to the file, every frame's page drawing to stdout ("frame N" first) */
+        audio_out = fopen(argv[3], "wb");
+        if (!audio_out) return 2;
+        video = 1;
+        E.draw_out = draw_print;
+        const int r = score(argv[2]);
+        fclose(audio_out);
+        return r;
+    }
     if (argc >= 5 && strcmp(argv[1], "page") == 0) {
         /* page TAG GROUP FRAMES [TOUCH_ENCODER [FREEZE]]: a chord held, the page drawn after FRAMES frames */
         emul_load(atoi(argv[2]));

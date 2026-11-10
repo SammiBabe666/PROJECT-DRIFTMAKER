@@ -1,0 +1,20 @@
+voice state 76 bytes, memory 248864 bytes
+preset  1 cathedral sleep    rms  3657  clipped 0
+preset  2 bronze choir       rms  3036  clipped 0
+preset  3 hollow reliquary   rms  3966  clipped 0
+preset  4 drowned gurdy      rms  4115  clipped 0
+preset  5 buried bell        rms  3575  clipped 0
+preset  6 ashen vespers      rms  4340  clipped 0
+preset  7 wailing room       rms  3332  clipped 0
+preset  8 blackened strings  rms  4102  clipped 0
+preset  9 mothlight          rms  2829  clipped 0
+preset 10 chapel of rain     rms  5064  clipped 0
+preset 11 hollow saint       rms  4326  clipped 0
+preset 12 funeral engine     rms  5135  clipped 0
+preset 13 witchglass         rms  2573  clipped 0
+preset 14 last procession    rms  2946  clipped 0
+preset 15 void mother        rms  7555  clipped 0
+preset 16 sleepwalker        rms  3111  clipped 0
+freeze: rms 590 twelve seconds after the keys were let go
+six voices, every value at its top: 36 samples at full scale in 8 s
+659 checks, 0 failed
