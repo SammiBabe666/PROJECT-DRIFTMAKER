@@ -1,0 +1,634 @@
+# DRIFTMAKER demo score: made by demo/make_score.py
+title driftmaker|an atmospheric drone engine for the op-1|opus 2 beta 4
+preset 0
+t 0.30
+on 48
+on 55
+on 60
+t 6.00
+section intro
+caption one held note becomes a whole environment.|eight sources, two slow modulators, grains, freeze and space.
+t 12.00
+section the interface: core
+caption push an encoder for its page. blue: core.|character morphs hollow pipe, organ, choirs, strings, gurdy, reed, bell.
+key 59
+t 12.40
+turn 0 3
+t 12.70
+turn 0 3
+t 13.00
+turn 0 3
+t 13.30
+turn 0 3
+t 13.60
+turn 0 3
+t 13.90
+turn 0 3
+t 14.20
+turn 0 3
+t 14.50
+turn 0 3
+t 14.80
+turn 0 3
+t 15.10
+turn 0 3
+t 15.40
+turn 0 3
+t 15.70
+turn 0 3
+t 16.00
+turn 0 3
+t 16.30
+turn 0 3
+t 16.60
+turn 0 3
+t 16.90
+turn 0 3
+t 17.20
+turn 0 3
+t 17.50
+turn 0 3
+t 17.80
+turn 0 3
+t 18.10
+turn 0 3
+t 18.40
+turn 0 3
+t 18.70
+turn 0 3
+t 19.00
+turn 0 3
+t 19.30
+turn 0 3
+t 19.60
+turn 0 3
+t 19.90
+turn 0 3
+t 20.20
+turn 0 3
+t 20.50
+turn 0 3
+t 21.80
+t 22.10
+turn 0 -5
+t 22.40
+turn 0 -5
+t 22.70
+turn 0 -5
+t 23.00
+turn 0 -5
+t 23.30
+turn 0 -5
+t 23.60
+turn 0 -5
+t 23.90
+turn 0 -5
+t 24.20
+turn 0 -5
+t 24.50
+turn 0 -5
+t 24.80
+turn 0 -5
+t 25.10
+turn 0 -5
+t 25.40
+turn 0 -5
+t 25.70
+turn 0 -5
+t 26.00
+turn 0 -5
+t 26.60
+caption tone adds the layer voice: sub octave, fifth or twelfth.|detune spreads the unison; filter darkens and resonates.
+t 26.90
+turn 1 -4
+t 27.20
+turn 1 -4
+t 27.50
+turn 1 -4
+t 27.80
+turn 1 -4
+t 28.10
+turn 1 -4
+t 28.40
+turn 1 -4
+t 28.70
+turn 1 -4
+t 29.00
+turn 1 -4
+t 29.30
+turn 1 -4
+t 29.60
+turn 1 -4
+t 29.85
+turn 1 4
+t 30.10
+turn 1 4
+t 30.35
+turn 1 4
+t 30.60
+turn 1 4
+t 30.85
+turn 1 4
+t 31.10
+turn 1 4
+t 31.35
+turn 1 4
+t 31.60
+turn 1 4
+t 31.85
+turn 1 4
+t 32.10
+turn 1 4
+t 32.35
+turn 1 4
+t 32.60
+turn 1 4
+t 32.85
+turn 1 4
+t 33.10
+turn 1 4
+t 33.35
+turn 1 4
+t 33.60
+turn 1 4
+t 33.90
+turn 3 -3
+t 34.20
+turn 3 -3
+t 34.50
+turn 3 -3
+t 34.80
+turn 3 -3
+t 35.10
+turn 3 -3
+t 35.40
+turn 3 -3
+t 35.70
+turn 3 -3
+t 36.00
+turn 3 -3
+t 36.30
+turn 3 -3
+t 36.60
+turn 3 -3
+t 36.90
+turn 3 3
+t 37.20
+turn 3 3
+t 37.50
+turn 3 3
+t 37.80
+turn 3 3
+t 38.10
+turn 3 3
+t 38.40
+turn 3 3
+t 38.70
+turn 3 3
+t 39.00
+turn 3 3
+t 39.30
+turn 3 3
+t 39.60
+turn 3 3
+t 39.90
+turn 3 3
+t 40.20
+turn 3 3
+t 41.20
+section movement
+caption green: motion. two modulators, 0.02 to 5 hz and 0.01 to 2 hz.|mod 1 bends pitch and sweeps the filter; mod 2 swells and drifts the timbre.
+key 60
+t 41.50
+turn 1 4
+t 41.80
+turn 1 4
+t 42.10
+turn 1 4
+t 42.40
+turn 1 4
+t 42.70
+turn 1 4
+t 43.00
+turn 1 4
+t 43.30
+turn 1 4
+t 43.60
+turn 1 4
+t 43.90
+turn 1 4
+t 44.20
+turn 1 4
+t 44.50
+turn 1 4
+t 44.80
+turn 1 4
+t 45.10
+turn 0 2
+t 45.40
+turn 0 2
+t 45.70
+turn 0 2
+t 46.00
+turn 0 2
+t 46.30
+turn 0 2
+t 46.60
+turn 0 2
+t 46.90
+turn 0 2
+t 47.20
+turn 0 2
+t 47.50
+turn 3 4
+t 47.80
+turn 3 4
+t 48.10
+turn 3 4
+t 48.40
+turn 3 4
+t 48.70
+turn 3 4
+t 49.00
+turn 3 4
+t 49.30
+turn 3 4
+t 49.60
+turn 3 4
+t 49.90
+turn 3 4
+t 50.20
+turn 3 4
+t 54.20
+caption every note also blooms over its first twelve seconds:|the filter opens and the timbre moves on.
+alloff
+t 55.70
+on 43
+on 50
+t 63.70
+alloff
+t 65.20
+section grains and freeze
+preset 9
+key 61
+caption white: texture. grains replay the last second and a half,|scattered by density, an octave up or down.
+t 65.50
+on 48
+on 55
+on 64
+t 65.90
+turn 0 4
+t 66.30
+turn 0 4
+t 66.70
+turn 0 4
+t 67.10
+turn 0 4
+t 67.50
+turn 0 4
+t 67.90
+turn 0 4
+t 68.30
+turn 0 4
+t 68.70
+turn 0 4
+t 69.10
+turn 0 4
+t 69.50
+turn 0 4
+t 69.90
+turn 2 3
+t 70.30
+turn 2 3
+t 70.70
+turn 2 3
+t 71.10
+turn 2 3
+t 71.50
+turn 2 3
+t 71.90
+turn 2 3
+t 72.30
+turn 2 3
+t 72.70
+turn 2 3
+t 76.70
+caption freeze stops the capture: the texture holds,|even after the keys are let go.
+t 77.70
+turn 1 30
+t 79.20
+alloff
+t 85.20
+caption degrade adds tape wow, saturation, lost bits and hiss.
+t 85.50
+turn 3 5
+t 85.80
+turn 3 5
+t 86.10
+turn 3 5
+t 86.40
+turn 3 5
+t 86.70
+turn 3 5
+t 87.00
+turn 3 5
+t 87.30
+turn 3 5
+t 87.60
+turn 3 5
+t 87.90
+turn 3 5
+t 88.20
+turn 3 5
+t 88.50
+turn 3 5
+t 88.80
+turn 3 5
+t 92.80
+t 92.95
+turn 3 -5
+t 93.10
+turn 3 -5
+t 93.25
+turn 3 -5
+t 93.40
+turn 3 -5
+t 93.55
+turn 3 -5
+t 93.70
+turn 3 -5
+t 93.85
+turn 3 -5
+t 94.00
+turn 3 -5
+t 94.15
+turn 3 -5
+t 94.30
+turn 3 -5
+t 94.45
+turn 3 -5
+t 94.60
+turn 3 -5
+turn 1 -60
+t 98.60
+section space
+preset 4
+key 62
+caption orange: space. a dark reverb, a delay up to 0.72 s with feedback,|and the mix.
+t 98.90
+on 52
+t 99.25
+off 52
+t 100.15
+on 59
+t 100.50
+off 59
+t 101.40
+on 52
+t 101.75
+off 52
+t 102.65
+on 59
+t 103.00
+off 59
+t 103.90
+turn 2 4
+turn 2 4
+turn 2 4
+turn 2 4
+turn 2 4
+turn 2 4
+on 52
+t 104.25
+off 52
+t 105.15
+on 59
+t 105.50
+off 59
+t 106.40
+on 52
+t 106.75
+off 52
+t 107.65
+on 59
+t 108.00
+off 59
+t 108.90
+turn 1 4
+turn 1 4
+turn 1 4
+turn 1 4
+turn 1 4
+turn 1 4
+t 111.90
+section the sixteen presets
+caption in the op-1's preset browser, folder driftmaker.
+t 114.90
+preset 0
+key 59
+preset_card 1|cathedral sleep|a deep church organ that slowly breathes
+t 115.20
+on 48
+on 55
+on 60
+t 121.70
+alloff
+t 123.00
+preset 1
+key 59
+preset_card 2|bronze choir|metallic, inharmonic voices from the bell zone
+t 123.30
+on 45
+on 52
+on 57
+t 129.80
+alloff
+t 131.10
+preset 2
+key 59
+preset_card 3|hollow reliquary|a stopped pipe and a sub octave in the dark
+t 131.40
+on 50
+on 57
+t 137.90
+alloff
+t 139.20
+preset 3
+key 59
+preset_card 4|drowned gurdy|the hurdy-gurdy's buzz, warped under water
+t 139.50
+on 43
+on 50
+on 55
+t 146.00
+alloff
+t 147.30
+preset 4
+key 59
+preset_card 5|buried bell|a resonant bell with a long, dark tail
+t 147.60
+on 40
+on 47
+t 154.10
+alloff
+t 155.40
+preset 5
+key 59
+preset_card 6|ashen vespers|a distant choir in a large stone room
+t 155.70
+on 50
+on 53
+on 57
+t 162.20
+alloff
+t 163.50
+preset 6
+key 59
+preset_card 7|wailing room|dissonant, wandering, never still
+t 163.80
+on 47
+on 48
+on 54
+t 170.30
+alloff
+t 171.60
+preset 7
+key 59
+preset_card 8|blackened strings|dark bowed layers with tape wear
+t 171.90
+on 45
+on 52
+on 53
+t 178.40
+alloff
+t 179.70
+preset 8
+key 59
+preset_card 9|mothlight|high, delicate harmonics shimmering
+t 180.00
+on 52
+on 59
+on 64
+t 186.50
+alloff
+t 187.80
+preset 9
+key 59
+preset_card 10|chapel of rain|a soft drone with grains like rain
+t 188.10
+on 48
+on 55
+on 64
+t 194.60
+alloff
+t 195.90
+preset 10
+key 59
+preset_card 11|hollow saint|a deep, voice-like sustained tone
+t 196.20
+on 50
+on 57
+on 60
+t 202.70
+alloff
+t 204.00
+preset 11
+key 59
+preset_card 12|funeral engine|a distorted industrial reed drone
+t 204.30
+on 41
+on 48
+on 49
+t 210.80
+alloff
+t 212.10
+preset 12
+key 59
+preset_card 13|witchglass|crystalline bells scattered into grains
+t 212.40
+on 53
+on 60
+on 64
+t 218.90
+alloff
+t 220.20
+preset 13
+key 59
+preset_card 14|last procession|a slow medieval march of strings and fifths
+t 220.50
+on 43
+on 50
+on 58
+t 227.00
+alloff
+t 228.30
+preset 14
+key 59
+preset_card 15|void mother|an enormous, dark, evolving atmosphere
+t 228.60
+on 38
+on 45
+t 235.10
+alloff
+t 236.40
+preset 15
+key 59
+preset_card 16|sleepwalker|a gentle, hypnotic, slowly shifting pad
+t 236.70
+on 48
+on 55
+on 62
+t 243.20
+alloff
+t 244.50
+section a short piece: ashen vespers
+caption a slow progression, d minor, b flat, f, c; freeze at the end.
+preset 5
+key 60
+t 245.00
+on 50
+on 57
+on 62
+t 245.60
+t 250.60
+on 46
+on 53
+on 62
+t 251.20
+off 50
+off 57
+off 62
+t 256.20
+on 41
+on 48
+on 57
+t 256.80
+off 46
+off 53
+off 62
+t 261.80
+on 48
+on 55
+on 64
+t 262.40
+off 41
+off 48
+off 57
+t 267.40
+on 50
+on 57
+on 62
+t 268.00
+off 48
+off 55
+off 64
+t 273.00
+key 61
+turn 1 30
+t 274.00
+alloff
+t 279.00
+turn 1 -60
+t 283.00
+end_card driftmaker 1.0.0|opus 2 beta 4 synth engine for the original op-1|inspired by fabula audio's drone maker
+t 290.00

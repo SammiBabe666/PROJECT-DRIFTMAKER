@@ -1,0 +1,4 @@
+cathedral sleep, two notes: mean 55752 worst 58302 (voices 24615, block 33687) cycles a block
+witchglass, six voices: mean 116183 worst 117047 (voices 80861, block 36186) cycles a block
+worst: six high voices, every value 99, frozen: mean 117930 worst 122545 (voices 78094, block 44451) cycles a block
+worst: six high voices, every value 99, grains: mean 117634 worst 119643 (voices 78094, block 41549) cycles a block
