@@ -1,0 +1,4 @@
+The Opus 2 plugin kit (beta 4), vendored unchanged from https://github.com/LizardMan245/opus, folder plugin-kit,
+commit e47b95fce500c470447eae1ca31a638c67b6dea4 (2026-11-09). GPL-3.0 (LICENSE here).
+Left out: tools/toolchain (the compiler's build script). The compiler is shared infrastructure, built once per
+computer, never part of a project: point OP1_BFIN_TOOLCHAIN at it (docs/BUILD.md).

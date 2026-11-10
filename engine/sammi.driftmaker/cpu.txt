@@ -1,0 +1,4 @@
+# DRIFTMAKER's CPU figure: its worst audio block in cycles (the build writes it as the manifest's cpu line).
+# NOT YET MEASURED ON AN OP-1: placeholder until the Blackfin-simulator estimate replaces it.
+cycles 200000
+estimated 2026-11-10 placeholder

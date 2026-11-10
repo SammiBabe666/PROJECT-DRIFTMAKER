@@ -1,0 +1,23 @@
+# sammi.driftmaker: DRIFTMAKER, an atmospheric drone engine for the original OP-1, inspired by Fabula Audio's
+# Drone Maker (an original engine: no code, samples or art of theirs). Eight sources morphing (hollow pipe, organ,
+# two choirs, bowed string, hurdy-gurdy, reed, bell), a layer voice, a resonant filter, two slow modulators, a bloom
+# over each note's first seconds; then on the voices' sum degrade, grains and freeze, delay and reverb.
+# T1: four pages of four values, one per encoder; push an encoder for its page: blue CORE, green MOTION, white
+# TEXTURE, orange SPACE. On CORE the turns are the OS's own (knobs 0-3, the OS's LFO reaches them); on the others
+# the engine's. Shift + a turn: a fine step. T2 and T4 stay the OS's (envelope, LFO).
+# Its 16 presets are in the preset browser's folder "driftmaker" (a preset source).
+opmod     1
+id        sammi.driftmaker
+name      DRIFTMAKER
+author    sammi
+version   1.0.0
+core      2.21
+adds      engine driftmaker
+uses      blue_push synth t1 modal "core page"
+uses      green_push synth t1 modal "motion page"
+uses      white_push synth t1 modal "texture page"
+uses      orange_push synth t1 modal "space page"
+uses      blue_turn synth t1 modal "page value 1"
+uses      green_turn synth t1 modal "page value 2"
+uses      white_turn synth t1 modal "page value 3"
+uses      orange_turn synth t1 modal "page value 4"
